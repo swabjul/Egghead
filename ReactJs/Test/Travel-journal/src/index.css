@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body > * {
+  font-family: Inter, sans-serif
+}
+
+#root {
+  height: 100%;
+  position: relative;
+  padding-bottom: 60px;
+}
+
+nav {
+  background: #f55a5a;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  padding-block: 10px;
+}
+
+.nav--logo {
+  display: flex;
+  width: 40px;
+}
+
+.nav--title {
+  font-weight: 400;
+}
+
+.card-container {
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px
+}
+
+.card {
+  display: flex;
+  border-bottom: 1px solid black;
+  padding-block: 30px;
+  gap: 40px;
+}
+
+.card:last-child {
+  border-bottom: unset;
+}
+
+.card--image {
+  width: 20%;
+}
+
+.card--image img {
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card--location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 600;
+}
+
+.card--location > svg{ 
+  width: 15px;
+  color: #f55a5a
+}
+
+.card--location > a {
+  font-weight: 300;
+  color: #918e9b;
+  font-size: 14px;
+}
+
+.card--text_area > h2 {
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.card--date {
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.card-description {
+  font-weight: 400;
+  font-size: 15px;
+  max-width: 860px;
+  color: #918e9b;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
+  background: #f55a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+@media screen and  (max-width: 768px){
+  .card {
+    flex-direction: column;
+    gap: 20px
+  }
+  
+  .card > * {
+    flex: 1
+  }
+
+  .card--image {
+    width: 100%;
+  }
+}

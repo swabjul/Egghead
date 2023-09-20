@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  padding: 0 20px;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-items > li{
+  padding: 10px;
+}
+
+.header-nav .logo {
+  width: 60px;
+}
+
+.header.align-center {
+  text-align: center;
+}
+
+
+
+.footer-container {
+  background-color: #b8afaf;
+  color: #fff;
+  padding: 10px 5px;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}

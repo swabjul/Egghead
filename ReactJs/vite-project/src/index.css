@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+#root {
+  display: grid;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #21222A;
+  height: 90px;
+  padding: 30px 25px;
+}
+
+.nav--logo-img {
+  height: 30px;
+  margin-right: 7px;
+}
+
+.nav--logo-text {
+  margin-right: auto;
+  color: #61DAFB;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.nav--title {
+  color: #DEEBF8;
+  font-weight: 600;
+}
+
+main {
+  /* background-color: #282D35;
+  background-image: url("img/react-icon-large.png");
+  background-repeat: no-repeat;
+  background-position: right top; */
+  background: #282D35 url("img/react-icon-large.png") right 20% no-repeat;
+
+  height: 100vh;
+  padding: 57px 27px;
+  color: #fff;
+}
+
+
+
+.main--h1_title {
+  font-size: 39px;
+  letter-spacing: -0.05em;
+}
+
+
+.main--list {
+  list-style: none;
+  margin-top: 46px;
+  max-width: 400px;
+}
+
+.main--list > li {
+  line-height: 19px;
+  padding-block: 10px;
+  position: relative;
+  padding-left: 23px;
+}
+
+.main--list > li::before {
+  position: absolute;
+  content: "";
+  background: #61dafe;
+  width: 9px;
+  height: 9px;
+  top: 16px;
+  left: 0;
+  border-radius: 18px;
+}
