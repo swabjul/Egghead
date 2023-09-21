@@ -1,18 +1,29 @@
-import React from "react"
+import React, {useState} from "react"
 import memesData from "../memesData"
 
 
 export default function Meme() {
+  const [memeImage,setMemeImage] = useState("")
 
-  let memeUrl
+
+
+
+  // const [memeTopText, setMemeTopText] = useState("Test")
+  // const [memeBottomText, setMemeBottomText] = useState("Test")
+  // const topTextElem = document.querySelector("[data-text='top']").value || "test"
+  // const bottomTextElem = document.querySelector("[data-text='bottom']").value || "test"
+
+  // setMemeTopText(topTextElem)
+  // setMemeBottomText(bottomTextElem)
+
+
+
+
 
   function getMemeImage() {
     const memesArray = memesData.data.memes
     const randomNumber = Math.floor(Math.random() * memesArray.length)
-    memeUrl = memesArray[randomNumber].url
-
-
-    console.log(memeUrl)
+    setMemeImage(memesArray[randomNumber].url)
   }
 
 
@@ -24,12 +35,14 @@ export default function Meme() {
   return (
     <>
     <div className="meme--form">
-      <input className="meme--input" type="text" placeholder="Shut up"/>
-      <input className="meme--input" type="text" placeholder="and take my money"/>
+      <input className="meme--input" type="text" placeholder="Top Text" data-text="top" />
+      <input className="meme--input" type="text" placeholder="Bottom Text" data-text="bottom"/>
       <button className="meme--button" onClick={getMemeImage}>Get a new meme Image 🖼️</button>
     </div>
-    <figure>
-      <img src={memeUrl} />
+    <figure className="meme--image">
+      <img src={memeImage} />
+      <p className="meme--top_text"><span>Test</span></p>
+      <p className="meme--bottom_text"><span>test</span></p>
     </figure>
     
     </>

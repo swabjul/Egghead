@@ -68,6 +68,39 @@ main {
   cursor: pointer;
 }
 
+.meme--image {
+  margin-top: 40px;
+  aspect-ratio: 1/1;
+  position: relative;
+  color: #fff;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 45px;
+  font-weight: 900;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.meme--top_text {
+  position: absolute;
+  top: 5%;
+  left: 50%; 
+}
+
+.meme--bottom_text {
+  position: absolute;
+  bottom: 5%;
+  left: 50%; 
+}
+
+
+.meme--top_text > span,
+.meme--bottom_text > span {
+  position: relative;
+  left: -50%;
+}
+
+
+
 button.meme--button {
   font-family: "Inter", sans-serif;
 }
@@ -87,7 +120,7 @@ button.meme--button {
 
 /* Testing Purposes */
 
-body {
+ /* body {
   height: 100vh;
   background-color: #262626;
   color: #fff;
@@ -151,4 +184,39 @@ body {
 .state--add {
   bottom: -10px;
   right: -30px;
+} */
+
+
+
+/* Testing Purposes */
+
+.test--container {
+  background-color: lightgreen;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.test--container button { 
+  width: 300px;
+  height: 60px;
+  border: 2px solid #fff;
+  background-color: lightgreen;
+  color: #fff;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  align-self: center;
+}
+
+.test--container button:hover {
+  color: lightgreen;
+  background-color: #fff;
+}
+
+.test--container p {
+  color: #fff;
+  margin-bottom: 20px;
+  justify-self: center;
 }
