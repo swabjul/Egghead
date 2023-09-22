@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 
 
-
 export default function Test() {
 
   // const [count, setCount] = useState(0)
@@ -22,26 +21,19 @@ export default function Test() {
   //   setIsGoingOut(prevState => !prevState)
   // }
 
+  const [thingsArray, setThingsArray] = useState(["Things 1", "Things 2"])
 
-  const [thingsArray, setThingArray] =  useState(["Thing 1", "Thing 2"])
-
-
- 
   function addItems() {
-    setThingArray(prevArray => {
-      return [...prevArray, `Thing ${prevArray.length + 1}`]
-
+    setThingsArray(prevThingsArray => {
+      return [...prevThingsArray, `Things ${prevThingsArray.length + 1}`]
     })
+
 
   }
 
 
 
-  const thingsElements = thingsArray.map(items => <p key={items}>{items}</p>)
-
-  
-
-
+  const thingsElements = thingsArray.map(things => <p key={things}>{things}</p>)
 
 
   return (

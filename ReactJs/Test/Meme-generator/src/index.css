@@ -70,7 +70,6 @@ main {
 
 .meme--image {
   margin-top: 40px;
-  aspect-ratio: 1/1;
   position: relative;
   color: #fff;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -190,7 +189,7 @@ button.meme--button {
 
 /* Testing Purposes */
 
-.test--container {
+/* .test--container {
   background-color: lightgreen;
   min-height: 100vh;
   display: flex;
@@ -219,4 +218,31 @@ button.meme--button {
   color: #fff;
   margin-bottom: 20px;
   justify-self: center;
+} */
+
+/* main {
+  padding: 20px;
 }
+.card {
+  width: 50%;
+  margin: 0 auto;
+  border: 1px solid rgb(218, 213, 213);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 10px 10px 5px 0px rgb(217 213 213 / 75%);
+}
+
+.card--favorite {
+  width: 30px;
+  margin-bottom: 20px;
+}
+
+.card--name {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.card--info > p { 
+  color: rgb(172, 168, 168);
+  margin-bottom: 5px;
+} */

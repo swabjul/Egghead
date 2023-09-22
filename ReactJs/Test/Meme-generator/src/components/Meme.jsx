@@ -3,34 +3,38 @@ import memesData from "../memesData"
 
 
 export default function Meme() {
-  const [memeImage,setMemeImage] = useState("")
 
+  const meme = {
+    topText: "aaaaa",
+    bottomText: "Test",
+    randomImage: "http://i.imgflip.com/1bij.jpg"
+  }
 
-
-
-  // const [memeTopText, setMemeTopText] = useState("Test")
-  // const [memeBottomText, setMemeBottomText] = useState("Test")
-  // const topTextElem = document.querySelector("[data-text='top']").value || "test"
-  // const bottomTextElem = document.querySelector("[data-text='bottom']").value || "test"
-
-  // setMemeTopText(topTextElem)
-  // setMemeBottomText(bottomTextElem)
-
-
+  const [allMemeImages,SetAllMemeImages] = useState(meme)
 
 
 
   function getMemeImage() {
     const memesArray = memesData.data.memes
     const randomNumber = Math.floor(Math.random() * memesArray.length)
-    setMemeImage(memesArray[randomNumber].url)
+
+    const topInputElement = document.querySelector("[data-text=top]")
+    const bottomInputElement = document.querySelector("[data-text=bottom]")
+
+    SetAllMemeImages(prevMeme => ({
+      ...prevMeme,
+      topText: topInputElement.value,
+      bottomText: bottomInputElement.value,
+      randomImage: memesArray[randomNumber].url
+
+
+    }))
+
+
+    // const memesArray = memesData.data.memes
+    // const randomNumber = Math.floor(Math.random() * memesArray.length)
+    // allMemeImages(memesArray[randomNumber].url)
   }
-
-
-
-
-
-
 
   return (
     <>
@@ -40,9 +44,9 @@ export default function Meme() {
       <button className="meme--button" onClick={getMemeImage}>Get a new meme Image 🖼️</button>
     </div>
     <figure className="meme--image">
-      <img src={memeImage} />
-      <p className="meme--top_text"><span>Test</span></p>
-      <p className="meme--bottom_text"><span>test</span></p>
+      <img src={allMemeImages.randomImage} />
+      <p className="meme--top_text"><span>{allMemeImages.topText}</span></p>
+      <p className="meme--bottom_text"><span>{allMemeImages.bottomText}</span></p>
     </figure>
     
     </>
